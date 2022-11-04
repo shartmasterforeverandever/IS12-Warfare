@@ -4,11 +4,10 @@
 	is_blue_team = TRUE
 	selection_color = "#76abb2"
 
-	//auto_rifle_skill = 10 //This is leftover from coldfare, but we could go back to that one day so better not to mess with it. //Fuck you we're not going back to it.
+	auto_rifle_skill = 10 //This is leftover from coldfare, but we could go back to that one day so better not to mess with it.
 	semi_rifle_skill = 10
-	boltie_skill = 10
 	sniper_skill = 3
-	shotgun_skill = 5
+	shotgun_skill = 6
 	lmg_skill = 3
 	smg_skill = 3
 
@@ -77,9 +76,8 @@
 	engineering_skill = 10
 	auto_rifle_skill = 5
 	semi_rifle_skill = 5
-	smg_skill = 3
+	smg_skill = 10
 	shotgun_skill = 10
-	boltie_skill = 5
 
 	announced = FALSE
 
@@ -121,7 +119,6 @@
 	semi_rifle_skill = 8
 	sniper_skill = 3
 	shotgun_skill = 3
-	boltie_skill = 3
 	lmg_skill = 3
 	smg_skill = 3
 	can_be_in_squad = FALSE
@@ -139,7 +136,7 @@
 
 /datum/job/soldier/blue_soldier/sentry
 	title = "Blue Sentry"
-	total_positions = 0
+	total_positions = 1
 	outfit_type = /decl/hierarchy/outfit/job/bluesoldier/sentry
 	auto_rifle_skill = 5
 	semi_rifle_skill = 5
@@ -147,7 +144,6 @@
 	shotgun_skill = 3
 	lmg_skill = 10
 	smg_skill = 3
-	boltie_skill = 3
 	can_be_in_squad = FALSE
 	open_when_dead = TRUE
 
@@ -318,18 +314,17 @@
 		r_pocket = /obj/item/shovel
 		belt = /obj/item/storage/belt/autoshotty
 		backpack_contents = list(/obj/item/stack/barbwire = 1, /obj/item/defensive_barrier = 3, /obj/item/storage/box/ifak = 1, /obj/item/grenade/smokebomb = 1)
-	else //if(prob(50))
+	else if(prob(50))
 		suit_store = /obj/item/gun/projectile/shotgun/pump/shitty
 		r_pocket = /obj/item/ammo_box/shotgun
 		belt = /obj/item/shovel
 		backpack_contents = list(/obj/item/stack/barbwire = 1, /obj/item/defensive_barrier = 3, /obj/item/storage/box/ifak = 1, /obj/item/grenade/smokebomb = 1)
-	/*
 	else
 		suit_store = /obj/item/gun/projectile/automatic/machinepistol
 		r_pocket = /obj/item/shovel
 		belt = /obj/item/storage/belt/warfare
 		backpack_contents = list(/obj/item/stack/barbwire = 1, /obj/item/defensive_barrier = 3, /obj/item/storage/box/ifak = 1, /obj/item/grenade/smokebomb = 1)
-	*/
+
 	if(aspect_chosen(/datum/aspect/somme))
 		suit_store = /obj/item/gun/projectile/shotgun/pump/shitty
 		r_pocket = /obj/item/ammo_box/shotgun
